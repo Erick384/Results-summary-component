@@ -2,34 +2,39 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-weight: bold;
+  /* font-weight: bold; */
 }
 body {
   display: flex;
   align-items: center;
   height: 100vh;
   justify-content: center;
+  flex-direction: column;
+  gap: 4rem;
   /* font-family: 'Hanken Grotesk', sans-serif; */
 }
 .container {
   display: flex;
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
   border-radius: 10px;
+  width: 40vw;
 }
 .left {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  text-align: center;
+  gap: 1.2rem;
   background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
   border-radius: 10px;
-  padding: 2.5rem;
+  padding: 2rem;
   width: 50%;
 }
 .circle {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   height: 10rem;
   width: 10rem;
   border-radius: 50%;
@@ -40,16 +45,28 @@ body {
 }
 .great {
   display: flex;
+  gap: 1.2rem;
   flex-direction: column;
   align-items: center;
 }
+.great p{
+  color: hsl(241, 100%, 89%);
+}
 .right {
-  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+  padding: 2rem;
   width: 50%;
 }
+.right-content{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
 .right-text {
-  padding: 5px;
-  margin-bottom: 1rem;
+  padding: 10px;
+  /* margin-bottom: 1rem; */
   align-items: center;
   border-radius: 10px;
   display: flex;
@@ -78,16 +95,31 @@ button {
   padding: 0.5rem;
   border-radius: 50px;
   margin-top: 1.5rem;
+  cursor: pointer;
 }
 @media screen and (max-width: 600px) {
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
   body {
-    width: fit-content;
-    height: fit-content;
-    font-family: 'Hanken Grotesk', sans-serif;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    margin-bottom: 3rem;
+    /* font-family: 'Hanken Grotesk', sans-serif; */
+  }
+  .container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
   }
   .circle {
-    height: 7rem;
-    width: 7rem;
+    height: 10rem;
+    width: 10rem;
     align-items: center;
     justify-content: center;
   }
@@ -101,6 +133,9 @@ button {
   }
   .left{
     border-radius:0 0 25px 25px;
+  }
+  .right-text{
+    padding: 1rem;
   }
  
 }
